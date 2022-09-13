@@ -1,0 +1,11 @@
+.checkList {
+  display: flex;
+  flex: 1 1 auto;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row;
+  li {
+    width: 50%;
+
+  }
+}

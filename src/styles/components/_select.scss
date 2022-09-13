@@ -1,0 +1,43 @@
+@import '../colors';
+
+.MHM-select {
+  .MHM-select__control {
+    border-radius: 2rem;
+  }
+  &__value-container {
+    display: inherit;
+  }
+  &__single-value {
+    display: inherit;
+  }
+  &__menu {
+    background-color: transparent;
+    &-list {
+      border-radius: 3rem;
+      background-color: white;
+      overflow: hidden;
+      padding: 2rem;
+      .MHM-select__option {
+        color: black;
+        
+      }
+    }
+  }
+  &__group {
+    &-heading {
+      color: $MHM-color-blue;
+      font-size: 2rem;
+      text-transform: uppercase;
+    }
+  }
+}
+
+
+.MHM-select__value-container {
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+.MHM-select__value-indicators {
+  background-color: black;
+}

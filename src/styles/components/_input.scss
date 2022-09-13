@@ -1,0 +1,17 @@
+.inputXL {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  input[type='checkbox'] {
+    width: 100px;
+    height: 100px;
+    border-radius: 12px;
+    background-color: white;
+  }
+  label {
+    color: white;
+    font-size: 1.25rem;
+    padding: 1rem;
+  }
+}

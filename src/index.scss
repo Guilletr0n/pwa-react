@@ -1,0 +1,23 @@
+@import './styles/layout';
+@import './styles/font';
+@import './styles/typography';
+@import './styles/components/header';
+@import './styles/components/select';
+@import './styles/components/input';
+@import './styles/components/checksList';
+
+body {
+  background: #072689;
+  background: -webkit-linear-gradient(top left, #072689, #027EF2);
+  background: -moz-linear-gradient(top left, #072689, #027EF2);
+  background: linear-gradient(to bottom right, #072689, #027EF2);
+  min-height: 100vh;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
