@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Progressive web app prototype by GUIDS
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project it's a prototype to test web app capabilitites on Safari
 
 ## Available Scripts
 
