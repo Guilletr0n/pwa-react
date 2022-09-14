@@ -8,7 +8,6 @@ export default function Header() {
         <ul className="main-nav__list">
           <li><Link to="/">Home</Link></li>
           <li><Link to="/preferences">Preferences</Link></li>
-          <li><Link to="/features">Features</Link></li>
           <li><Link to="/destination">Destination</Link></li>
         </ul>
       </nav>

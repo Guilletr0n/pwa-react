@@ -1,14 +1,23 @@
 .MHM-header {
   .main-nav {
+    display: none;
     .main-nav__list {
-      
+      display: flex;
+      flex-direction: row;
       li {
         color: white;
         a {
-
           color: white;
         }
       }
+    }
+  }
+}
+
+@media all and (min-width: 480px) {
+  .MHM-header {
+    .main-nav {
+      display: flex;
     }
   }
 }

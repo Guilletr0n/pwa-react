@@ -3,8 +3,8 @@ import Content from "../content";
 
 export default function Features() {
   return (
-    <main>
-      <h2>Comming Features...</h2>
+    <main className="main-selection-layout">
+      <h2 className="title">Comming Features...</h2>
       <FeaturesList content={Content.highlevel} />
     </main>
   );

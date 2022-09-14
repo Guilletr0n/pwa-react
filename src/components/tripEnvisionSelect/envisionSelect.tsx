@@ -13,7 +13,7 @@ export default function EnvisionSelect()  {
   }
 
   return (
-    <section className="checksLayout">
+    <section className="checks-layout">
       <ul className="checkList">
         {envisions.map((i) => 
           <li key={i.label}> 

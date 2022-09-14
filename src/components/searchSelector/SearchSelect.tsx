@@ -5,8 +5,6 @@ import { InputActionMeta } from "react-select";
 
 export default function SearchSelect()  {
   
-  const handleChange = (e:any) => {console.log(e.value)}
-
   // Bug:Comes with empty value
   const onInputChange = (
     inputValue: string,
@@ -114,7 +112,6 @@ export default function SearchSelect()  {
       //border: '1px solid rgba(255,255,255,0.1)',
       padding: '1rem',
       //backgroundColor: 'transparent',
-      fontSize: '1.5rem'
     }),
     control: (provided:any) => ({
       ...provided,
@@ -133,13 +130,13 @@ export default function SearchSelect()  {
   return (
     <div>
       <Select
-      menuIsOpen={true}
         className="MHM-select"
         classNamePrefix="MHM-select"
         styles={customStyles}
         isSearchable 
         options={StateOptions} 
         onInputChange ={onInputChange}
+        placeholder="Select your destination..."
         onChange={(e:any)=>{dispatch(updateDestination(e.value))}}
       />
     </div>

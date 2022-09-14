@@ -5,6 +5,7 @@
 @import './styles/components/select';
 @import './styles/components/input';
 @import './styles/components/checksList';
+@import './styles/components/navigation';
 
 body {
   background: #072689;
@@ -16,6 +17,8 @@ body {
 
 ul {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 a {

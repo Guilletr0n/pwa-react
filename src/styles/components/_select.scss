@@ -1,6 +1,7 @@
 @import '../colors';
 
 .MHM-select {
+  min-width: 300px;
   .MHM-select__control {
     border-radius: 2rem;
   }
@@ -19,7 +20,6 @@
       padding: 2rem;
       .MHM-select__option {
         color: black;
-        
       }
     }
   }
@@ -32,12 +32,21 @@
   }
 }
 
-
 .MHM-select__value-container {
-  font-size: 1.5rem;
+  font-size: 1.15rem;
   padding: 1rem;
 }
 
 .MHM-select__value-indicators {
   background-color: black;
+}
+
+@media only screen and (min-width: 480px) {
+  .MHM-select {
+    min-width: 400px;
+    .MHM-select__value-container {
+      font-size: 1.5rem;
+      padding: 1rem;
+    }
+  }
 }
