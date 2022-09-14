@@ -14,7 +14,7 @@ export default function EnvisionSelect()  {
 
   return (
     <section className="checks-layout">
-      <ul className="checkList">
+      <ul className="check-list">
         {envisions.map((i) => 
           <li key={i.label}> 
             <MHMcheckbox 

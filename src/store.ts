@@ -1,11 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit'
 import destinationReducer from './components/searchSelector/selectorSlice'
 import tripEnvisionReducer from './components/tripEnvisionSelect/tripEnvisionSlice'
+import budgetReducer from './components/budgetSelect/budgetSlice'
 
 export const store = configureStore({
   reducer: {
     destination: destinationReducer,
-    tripEnvision: tripEnvisionReducer
+    tripEnvision: tripEnvisionReducer,
+    budget: budgetReducer,
   }
 })
 

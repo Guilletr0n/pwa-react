@@ -5,21 +5,7 @@ import { InputActionMeta } from "react-select";
 
 export default function SearchSelect()  {
   
-  // Bug:Comes with empty value
-  const onInputChange = (
-    inputValue: string,
-    { action, prevInputValue }: InputActionMeta
-  ) => {
-    switch (action) {
-      case 'set-value':
-        console.log(prevInputValue);
-        return
-      default:
-        return
-    }
-  };
-
-  //const destination = useAppSelector(selectDestination)
+  const destination = useAppSelector(selectDestination)
   const dispatch = useAppDispatch();
 
   interface StateOptions {
@@ -134,10 +120,12 @@ export default function SearchSelect()  {
         classNamePrefix="MHM-select"
         styles={customStyles}
         isSearchable 
-        options={StateOptions} 
-        onInputChange ={onInputChange}
+        options={StateOptions}
+        value={{label:destination}}
+        //onInputChange ={onInputChange}
         placeholder="Select your destination..."
         onChange={(e:any)=>{dispatch(updateDestination(e.value))}}
+        //onChange={(e:any)=>{console.log(e.value)}}
       />
     </div>
   );

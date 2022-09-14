@@ -6,7 +6,7 @@ import { Envision } from '../types';
 export interface TripEnvisionState {
   value: Array<Envision>
 }
-
+//TODO: Build the state with a loop
 const initialState: TripEnvisionState = {
   value: [
     {label: TripEnvisions.BEACH, value: false},
