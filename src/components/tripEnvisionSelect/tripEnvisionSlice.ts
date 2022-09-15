@@ -6,20 +6,9 @@ import { Envision } from '../types';
 export interface TripEnvisionState {
   value: Array<Envision>
 }
-//TODO: Build the state with a loop
+
 const initialState: TripEnvisionState = {
-  value: [
-    {label: TripEnvisions.BEACH, value: false},
-    {label: TripEnvisions.CITY_CRUISING, value: false},
-    {label: TripEnvisions.CULTURAL_EXPERIENCE, value: false},
-    {label: TripEnvisions.DOING_BUSINESS, value: false},
-    {label: TripEnvisions.NATURE_EXPLORATION, value: false},
-    {label: TripEnvisions.PARTY, value: false},
-    {label: TripEnvisions.ROMANCE, value: false},
-    {label: TripEnvisions.SPORT_ACTIVITY, value: false},
-    {label: TripEnvisions.WELLNESS_AND_RELAXATION, value: false},
-    {label: TripEnvisions.WORK_REMOTELY, value: false}
-  ]
+  value: Object.values(TripEnvisions).map((e)=>{return({label:e, value: false})})
 }
 
 export const envisionSlice = createSlice({

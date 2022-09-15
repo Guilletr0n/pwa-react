@@ -1,30 +1,30 @@
 import { SyntheticEvent } from "react";
 import { useAppSelector, useAppDispatch } from "../../hooks";
-import { updateBudget, selectBudget } from "./budgetSlice";
-import { BudgetAmounts } from '../../enums';
+import { updateKind, selectKind } from "./kindSlice";
+import { TravellersKind } from '../../enums';
 
-export default function BudgetSelect() {
-  const budget = useAppSelector(selectBudget)
+export default function KindSelect() {
+  const kind = useAppSelector(selectKind)
   const disptach = useAppDispatch();
 
-  const budgetAmountsLabels: string[] = Object.values(BudgetAmounts)
+  const kindLabels: string[] = Object.values(TravellersKind)
 
   const handleChange = (evt:SyntheticEvent) => {
-    disptach(updateBudget((evt.target as HTMLInputElement).value))
+    disptach(updateKind((evt.target as HTMLInputElement).value))
   };
 
   return (
     <section className="checks-layout">
         <form>
       <ul className="check-list">
-          {budgetAmountsLabels.map((i) =>
+          {kindLabels.map((i) =>
             <li key={i}
               className="inputXL">
               <input
                 id={i}
                 type="radio"
-                name="budget"
-                checked = {budget === i}
+                name="kind"
+                checked = {kind === i}
                 onChange={handleChange}
                 value={i}/>
                 <label htmlFor={i}>{i}</label>

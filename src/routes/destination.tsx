@@ -16,7 +16,7 @@ export default function destination() {
       <aside></aside>
       <footer>
         <NavButton link="/" label="Home" direction="back"/>
-        <NavButton link="/envision" label="Envision" />
+        <NavButton link="/travellers" label="Who is travelling" />
       </footer>
     </div>
   )
