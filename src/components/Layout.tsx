@@ -8,7 +8,8 @@ interface LayoutProps {
 export default function Layout(props:LayoutProps) {
   
   const styles = {
-    minHeight: props?.height
+    minHeight: props?.height,
+    maxWidth: 'calc(props.width - 10px)'
   }
   
   return (

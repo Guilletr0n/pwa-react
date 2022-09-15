@@ -4,6 +4,8 @@ import Layout from '../components/Layout'
 import { selectTripEnvision  } from "../components/tripEnvisionSelect/tripEnvisionSlice";
 import { selectBudget } from "../components/budgetSelect/budgetSlice";
 import { selectDestination } from '../components/searchSelector/selectorSlice'
+import { selectKind } from "../components/travellersKind/kindSlice";
+import { selectTripExperience } from "../components/tripExperienceSelect/tripExperienceSlice";
 
 export default function UserPreferences() {
   const { height, width } = useWindowDimensions();
@@ -11,22 +13,63 @@ export default function UserPreferences() {
   const envisions = useAppSelector(selectTripEnvision)
   const budget = useAppSelector(selectBudget)
   const destination = useAppSelector(selectDestination)
+  const kind = useAppSelector(selectKind)
+  const experiences = useAppSelector(selectTripExperience)
 
   return (
-    <Layout height={height} class="centered-layout">
-      <main>
+    <Layout height={height} width={width} class="centered-layout">
+      <main className="preferences">
         <div className="container-small">
-          <h3>All right,</h3>
-          <h4>This are your preferences:</h4>
-          <h5>Destination: {destination}</h5>
-          <h5>Envisions:</h5>
-          <ul>
-          {envisions.map((i) =>
-            <li key={i.label}>{i.value ? i.label : ''}</li>
-          )}
+          <h3>User Preferences</h3>
+
+          <section className="preferences__section">
+            <h5>Destination</h5>
+            <span className="pill">{destination}</span>
+          </section>
+
+          <section className="preferences__section --list">
+            <ul className="preferences__pill-list">
+            <li className="preferences__pill-list__title">
+                <h5>Envisions</h5>
+              </li>
+              { envisions.map( 
+                (i) => i.value ? 
+                  <li key={i.label} 
+                    className="preferences__pill-list__item">
+                    {i.label}
+                  </li>
+                  : null  
+                ) }
+            </ul>
+          </section>
+
+          <section className="preferences__section">
+            <h5>Budget</h5>
+            <span className="pill">{ budget }</span>
+          </section>
+
+          <section className="preferences__section">
+            <h5>Who is travelling</h5>
+            <p className="pill"> { kind }</p>
+          </section>
+
+          <section className="preferences__section --list">
+           
+            <ul className="preferences__pill-list">
+              <li className="preferences__pill-list__title">
+                <h5>Trip Experience</h5>
+              </li>
+              {experiences.map(
+                (i) => i.value ? 
+                <li key={i.label} 
+                  className="preferences__pill-list__item">
+                  {i.label}
+                </li>
+                : null
+              )}
           </ul>
-          <h5>Budget: {budget}</h5>
-          <p>{}</p>
+          </section>
+
         </div>
       </main>
       <footer>
