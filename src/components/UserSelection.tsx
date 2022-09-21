@@ -6,6 +6,7 @@ import { selectBudget } from "../components/budgetSelect/budgetSlice";
 import { selectDestination } from '../components/searchSelector/selectorSlice'
 import { selectKind } from "../components/travellersKind/kindSlice";
 import { selectTripExperience } from "../components/tripExperienceSelect/tripExperienceSlice";
+import { selectDate } from "../components/tripDateSelect/tripDateSlice";
 
 export default function UserSelection() {
   const envisions = useAppSelector(selectTripEnvision)
@@ -13,6 +14,9 @@ export default function UserSelection() {
   const destination = useAppSelector(selectDestination)
   const kind = useAppSelector(selectKind)
   const experiences = useAppSelector(selectTripExperience)
+  const date = useAppSelector(selectDate)
+
+  console.log( date.getDay() + " " + date.getMonth() + " " + date.getFullYear())
 
   return (
     <main className="preferences">
@@ -46,6 +50,11 @@ export default function UserSelection() {
         <section className="preferences__section">
           <h5>Who is travelling</h5>
           <p className="pill"> { kind }</p>
+        </section>
+        
+        <section className="preferences__section">
+          <h5>Date</h5>
+          <span className="pill">{ date.getDate()}/{date.getMonth()+1}/{date.getFullYear() }</span>
         </section>
 
         <section className="preferences__section --list">

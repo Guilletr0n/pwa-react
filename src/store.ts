@@ -3,7 +3,8 @@ import destinationReducer from './components/searchSelector/selectorSlice'
 import tripEnvisionReducer from './components/tripEnvisionSelect/tripEnvisionSlice'
 import budgetReducer from './components/budgetSelect/budgetSlice'
 import kindReducer from './components/travellersKind/kindSlice'
-import experienceReducer from './components/tripExperienceSelect/tripExperienceSlice'
+import experienceReducer from './components/tripExperienceSelect/tripExperienceSlice';
+import tripDateReducer from './components/tripDateSelect/tripDateSlice';
 
 export const store = configureStore({
   reducer: {
@@ -11,7 +12,8 @@ export const store = configureStore({
     tripEnvision: tripEnvisionReducer,
     budget: budgetReducer,
     travellerKind: kindReducer,
-    tripExperience: experienceReducer
+    tripExperience: experienceReducer,
+    tripDate: tripDateReducer
   }
 })
 

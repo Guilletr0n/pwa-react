@@ -1,15 +1,8 @@
-import { useState, ChangeEvent } from "react";
 import NavButton from "../components/buttons/NavButton";
 import BudgetSelect from "../components/budgetSelect/budgetSelect";
-import DatePicker from "react-datepicker";
+import TripDateSelect from "../components/tripDateSelect/TripDateSelect";
 
 export default function UserBudget() {
-
-  const [startDate, setStartDate] = useState(new Date());
-  function handleDateChange(date:Date) {
-    setStartDate(date);
-  }
-
 
   return (
     <main className="main-selection-layout">
@@ -17,7 +10,7 @@ export default function UserBudget() {
       <BudgetSelect />
       <h2 className="title">So, when shall we go?</h2>
       <div className="centered-layout">
-        <DatePicker selected={startDate} onChange={handleDateChange} />
+        <TripDateSelect />
       </div>
       
       <footer>

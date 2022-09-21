@@ -34,6 +34,10 @@
     &:not(last-child) {
       border-top: 1px solid rgba(255,255,255,0.25);
     }
+
+    &:first-child {
+      border: none;
+    }
   }
   &__pill-list {
     display: flex;
