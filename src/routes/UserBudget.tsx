@@ -22,7 +22,7 @@ export default function UserBudget() {
       
       <footer>
         <NavButton link="/envision" label="Envision" direction="back"/>
-        <NavButton link="/preferences" label="Preferences" />
+        <NavButton link="/results" label="Results" />
       </footer>
     </main>
   )
