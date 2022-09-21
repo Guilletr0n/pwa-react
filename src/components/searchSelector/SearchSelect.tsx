@@ -2,6 +2,7 @@ import { useAppSelector, useAppDispatch } from "../../hooks";
 import { updateDestination, selectDestination } from './selectorSlice'
 import Select from 'react-select'
 import { InputActionMeta } from "react-select";
+import { reduceEachLeadingCommentRange } from "typescript";
 
 export default function SearchSelect()  {
   
@@ -63,47 +64,30 @@ export default function SearchSelect()  {
   const customStyles = {
     container: (provided:any) => ({
       ...provided,
-      //border: '2px solid red',
-      //backgroundColor: 'transparent'
     }),
     menu: (provided:any) => ({
       ...provided,
-      //border: '2px solid red',
       borderRadius: '2rem',
       OverflowY: 'hidden',
       height: '100%',
-      
-      //backgroundColor: 'transparent'
     }),
     menuList: (provided:any) => ({
       ...provided,
       OverflowY: 'hidden',
       minHeight: '950px'
-      //border: '2px solid red',
-      //backgroundColor: 'transparent'
     }),
     option: (provided:any) => ({
       ...provided,
-     // border: '2px solid black',
-      //backgroundColor: 'transparent'
     }),
     singleValue: (provided:any) => ({
       ...provided,
-      //border: '2px solid green',
-      //backgroundColor: 'transparent',
-      //color: 'white'
     }),
     valueContainer: (provided:any) => ({
       ...provided,
-      //border: '1px solid rgba(255,255,255,0.1)',
-      padding: '1rem',
-      //backgroundColor: 'transparent',
+      fontWeight: '400',
     }),
     control: (provided:any) => ({
       ...provided,
-      //border: '1px solid rgba(255,255,255,0.1)',
-      //borderRadius: '2rem',
-      //backgroundColor: 'rgba(255,255,255,0.1)',
       color: 'white'
     }),
     groupHeading: (provided:any) => ({
@@ -122,10 +106,8 @@ export default function SearchSelect()  {
         isSearchable 
         options={StateOptions}
         value={{label:destination}}
-        //onInputChange ={onInputChange}
         placeholder="Select your destination..."
         onChange={(e:any)=>{dispatch(updateDestination(e.value))}}
-        //onChange={(e:any)=>{console.log(e.value)}}
       />
     </div>
   );

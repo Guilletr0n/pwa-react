@@ -66,11 +66,15 @@ div#root, body {
       grid-column: 1 / 4;
     }
   }
+  .main-selection-layout {
+    padding: 0.5rem;
+  }
 }
 
 footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: 50px;
 }
 

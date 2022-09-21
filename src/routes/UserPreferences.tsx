@@ -20,8 +20,6 @@ export default function UserPreferences() {
     <Layout height={height} width={width} class="centered-layout">
       <main className="preferences">
         <div className="container-small">
-          <h3>User Preferences</h3>
-
           <section className="preferences__section">
             <h5>Destination</h5>
             <span className="pill">{destination}</span>

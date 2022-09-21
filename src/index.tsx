@@ -13,6 +13,7 @@ import UserBudget from './routes/UserBudget';
 import UserPreferences from './routes/UserPreferences';
 import TravellersKind from './routes/TravellersKind';
 import TravelExperience from './routes/TravelExperience';
+import AppResults from './routes/AppResults';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -29,6 +30,7 @@ root.render(
           <Route path="experience" element={<TravelExperience />} />
           <Route path="budget" element={<UserBudget />} />
           <Route path="preferences" element={<UserPreferences />} />
+          <Route path="results" element={<AppResults />} />
         </Routes>
       </BrowserRouter>
     </Provider>
