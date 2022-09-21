@@ -6,6 +6,10 @@ export default function Navigation() {
       <ul className="main-nav__list">
         <li><Link to="/">Home</Link></li>
         <li><Link to="/destination">Destination</Link></li>
+        <li><Link to="/travellers">Who's travelling</Link></li>
+        <li><Link to="/envision">Envision</Link></li>
+        <li><Link to="/experience">Experience</Link></li>
+        <li><Link to="/budget">Budget</Link></li>
         <li><Link to="/preferences">Preferences</Link></li>
       </ul>
     </nav>

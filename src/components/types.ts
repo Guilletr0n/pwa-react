@@ -8,3 +8,8 @@ export interface NavigationLink {
   label: string,
   direction?: string | undefined
 }
+
+export interface Experience {
+  label: string,
+  value: boolean
+}

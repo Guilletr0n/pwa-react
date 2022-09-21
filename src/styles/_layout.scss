@@ -11,6 +11,7 @@ div#root, body {
 
 .centered-layout {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100%;
@@ -65,11 +66,15 @@ div#root, body {
       grid-column: 1 / 4;
     }
   }
+  .main-selection-layout {
+    padding: 0.5rem;
+  }
 }
 
 footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: 50px;
 }
 

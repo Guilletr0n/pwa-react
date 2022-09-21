@@ -1,0 +1,16 @@
+.card-result {
+  border:1px solid rgba(255,255,255,0.5);
+  border-radius: 20px;
+  h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0.5rem;
+  }
+  p {
+    margin: 0;
+    padding: 0;
+  }
+  img {
+    border-radius: 20px;
+    max-width: 100%;
+  }
+}

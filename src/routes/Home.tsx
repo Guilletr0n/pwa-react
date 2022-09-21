@@ -7,7 +7,7 @@ export default function Home() {
 
   return (
     <Layout height={height} class="centered-layout">
-      <main className="centered-layout">
+      <main>
         <div className="container-small">
           <h3>Welcome</h3>
           <h5>This is a prototype for a web app to test Safari capabilities on iOS. Use the menu above to navigate between pages.</h5>

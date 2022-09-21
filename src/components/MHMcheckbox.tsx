@@ -27,6 +27,5 @@ export default function MHMcheckbox(props:EnvisionCheck) {
           {props.label}
       </label>
     </div>
-  ); 
-  
+  );
 };

@@ -91,6 +91,63 @@ type featuresListContent = {
   webappabilities:String[]
 }
 
-const Content:featuresListContent  = {highlevel: highlevel, serviceworkers: serviceworkers, webappabilities: webabilities };
+type Picture = {
+  url: string,
+  caption: string
+}
+
+
+export type ResultsItem = {
+  match: string,
+  title: string,
+  pic: Picture,
+  tags: string[]
+}
+
+export const results: ResultsItem[] = [
+  { 
+    match: '95',
+    title: 'Hotel 1',
+    pic: {
+      url: 'assets/images/hotel-1.png',
+      caption: 'Hotel'
+    },
+    tags: ['museums', 'swimming pool']
+  },
+  { 
+    match: '90',
+    title: 'Hotel 2',
+    pic: {
+      url: 'assets/images/hotel-2.png',
+      caption: 'Hotel'
+    },
+    tags: ['spa', 'swimming pool', 'gym']
+  },
+  { 
+    match: '85',
+    title: 'Hotel 3',
+    pic: {
+      url: 'assets/images/hotel-3.png',
+      caption: 'Hotel'
+    },
+    tags: ['breakfast', 'swimming pool']
+  },
+  { 
+    match: '70',
+    title: 'Hotel 4',
+    pic: {
+      url: 'assets/images/hotel-4.png',
+      caption: 'Hotel'
+    },
+    tags: ['gastronomic foor', 'swimming pool', 'spa']
+  }
+]
+
+
+const Content:featuresListContent  = { 
+  highlevel: highlevel,
+  serviceworkers: serviceworkers,
+  webappabilities: webabilities
+};
 
 export default Content;
